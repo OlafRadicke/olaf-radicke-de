@@ -15,8 +15,10 @@ hugo server
 Build
 -----
 
+Live build:
+
 ```
-hugo -D
+hugo -D -v
 ```
 
 
@@ -35,19 +37,24 @@ Create container image
 Enter
 
 ```bash
-podman build -t olaf-radicke-de:latest --no-cache=false .
+podman build -t olaf-radicke-de:latest --no-cache=true .
 ```
 
 Test run:
 
 ```
-podman run --name olaf-radicke-de:latest -d -p 8080:80 --rm olaf-radicke-de
+podman run --name olaf-radicke-de -d -p 8080:80 --rm olaf-radicke-de:latest
 ```
 
 Push image:
 
 ```bash
 podman login docker.io
-podman tag  olaf-radicke-de:latest  olafradicke/olaf-radicke-de:1.0
-podman push olafradicke/olaf-radicke-de:1.0
+podman tag  olaf-radicke-de:latest  olafradicke/olaf-radicke-de:2.4
+podman push olafradicke/olaf-radicke-de:2.4
 ```
+
+Todos
+-----
+
+- Add CV and profile [as google link](config.toml)

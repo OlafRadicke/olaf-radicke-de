@@ -1,4 +1,4 @@
-baseURL = 'http://olaf-radicke/'
+baseURL = 'https://olaf-radicke.de/'
 languageCode = 'de-de'
 title = 'Olaf Radicke'
 
@@ -44,13 +44,13 @@ theme = "hugo-split-theme"
 
     [[params.links.list2.link]]
       text = "Projekt Historie (PDF/en)"
-      url = "mailto:briefkasten@olaf-radicke.de"
+      url = "https://docs.google.com/document/d/1lzbExOxwL9lnDplrk-ENIZNJkn4JcUz_klM-wTmQ2jU/edit?usp=sharing"
 
     [[params.links.list2.link]]
       text = "Lebenslauf (PDF/de)"
-      url = "mailto:briefkasten@olaf-radicke.de"
+      url = "https://docs.google.com/document/d/1O7qG6L7se87oPNLRSmL52_ditZcUT2EYW8OZbviOomE/edit?usp=sharing"
 
     [[params.links.list2.link]]
       text = "Lebenslauf (PDF/en))"
-      url = "mailto:briefkasten@olaf-radicke.de"
+      url = "https://docs.google.com/document/d/16fPRN1F2pp3ZMqRY9tEgKsKz2vE19MKiRgOf6coxngk/edit?usp=sharing"
 
