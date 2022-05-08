@@ -1,0 +1,56 @@
+baseURL = 'http://olaf-radicke/'
+languageCode = 'de-de'
+title = 'Olaf Radicke'
+
+theme = "hugo-split-theme"
+
+[params.visual.image]
+  enable = true
+  file = "images/portrait.jpg"
+  position = "center center"
+
+
+[[params.links]]
+  [params.links.list1]
+    heading = "Accounts"
+
+    [[params.links.list1.link]]
+      text = "freelancermap"
+      url = "https://www.freelancermap.de/freelancer-verzeichnis/profile/entwicklung/221480-profil-olaf-radicke-release-engineer-devops-site-reliability.html"
+
+    [[params.links.list1.link]]
+      text = "Xing"
+      url = "https://www.xing.com/profile/Olaf_Radicke/cv"
+
+    [[params.links.list1.link]]
+      text = "LinkedIn"
+      url = "https://www.linkedin.com/in/olaf-radicke-72b7b462/"
+
+    [[params.links.list1.link]]
+      text = "Github"
+      url = "https://github.com/OlafRadicke"
+
+    [[params.links.list1.link]]
+      text = "IT-Haftpflicht"
+      url = "https://www.exali.de/siegel/Olaf-Radicke"
+
+
+  [params.links.list2]
+    heading = "Downloads"
+
+    [[params.links.list2.link]]
+      text = "Projekt Historie (PDF/de)"
+      url = "https://docs.google.com/document/d/1jyHMSB8sRpkCbfxp76Oo5leONl4ohy1f7syZgsdqFGc/edit?usp=sharing"
+
+    [[params.links.list2.link]]
+      text = "Projekt Historie (PDF/en)"
+      url = "mailto:briefkasten@olaf-radicke.de"
+
+    [[params.links.list2.link]]
+      text = "Lebenslauf (PDF/de)"
+      url = "mailto:briefkasten@olaf-radicke.de"
+
+    [[params.links.list2.link]]
+      text = "Lebenslauf (PDF/en))"
+      url = "mailto:briefkasten@olaf-radicke.de"
+
