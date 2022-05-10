@@ -15,12 +15,9 @@ hugo server
 Build
 -----
 
-Live build:
-
 ```
-hugo -D -v
+hugo -D 
 ```
-
 
 Update the theme
 ----------------
