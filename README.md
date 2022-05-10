@@ -50,7 +50,7 @@ Build and push image (copy&paste)
 ---------------------------------
 
 ```bash
-LATES_VERSION=2.9
+LATES_VERSION=2.10
 hugo -D
 podman build -t olaf-radicke-de:latest --no-cache=true .
 podman tag  olaf-radicke-de:latest  olafradicke/olaf-radicke-de:${LATES_VERSION}

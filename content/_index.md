@@ -1,5 +1,5 @@
 +++
-title = "Olaf Radicke - Release Engineer"
+title = "Olaf Radicke - Release Engineer - Freelancer"
 tagline = "DevOps / site reliability"
 +++
 

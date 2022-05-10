@@ -39,7 +39,7 @@ theme = "hugo-split-theme"
     heading = "Downloads"
 
     [[params.links.list2.link]]
-      text = "Projekt Historie (de)"
+      text = "Projekte/Profil (de)"
       url = "https://docs.google.com/document/d/1jyHMSB8sRpkCbfxp76Oo5leONl4ohy1f7syZgsdqFGc/edit?usp=sharing"
 
     [[params.links.list2.link]]
@@ -47,7 +47,7 @@ theme = "hugo-split-theme"
       url = "https://docs.google.com/document/d/1O7qG6L7se87oPNLRSmL52_ditZcUT2EYW8OZbviOomE/edit?usp=sharing"
 
     [[params.links.list2.link]]
-      text = "Projekt Historie (en)"
+      text = "Projekte/Profil (en)"
       url = "https://docs.google.com/document/d/1lzbExOxwL9lnDplrk-ENIZNJkn4JcUz_klM-wTmQ2jU/edit?usp=sharing"
 
     [[params.links.list2.link]]
