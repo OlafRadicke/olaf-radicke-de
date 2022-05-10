@@ -46,15 +46,17 @@ Test run:
 podman run --name olaf-radicke-de -d -p 8080:80 --rm olaf-radicke-de:latest
 ```
 
-Push image:
+Build and push image (copy&paste)
+---------------------------------
 
 ```bash
-podman login docker.io
-podman tag  olaf-radicke-de:latest  olafradicke/olaf-radicke-de:2.4
-podman push olafradicke/olaf-radicke-de:2.4
+LATES_VERSION=2.9
+hugo -D
+podman build -t olaf-radicke-de:latest --no-cache=true .
+podman tag  olaf-radicke-de:latest  olafradicke/olaf-radicke-de:${LATES_VERSION}
+podman push olafradicke/olaf-radicke-de:${LATES_VERSION}
 ```
 
 Todos
 -----
 
-- Add CV and profile [as google link](config.toml)
