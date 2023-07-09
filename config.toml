@@ -54,3 +54,14 @@ theme = "hugo-split-theme"
       text = "Lebenslauf (en)"
       url = "https://docs.google.com/document/d/16fPRN1F2pp3ZMqRY9tEgKsKz2vE19MKiRgOf6coxngk/edit?usp=sharing"
 
+
+  [params.links.list3]
+    heading = "Mitgliedschaften"
+
+    [[params.links.list3.link]]
+      text = "IT-Projektgenossenschaft eG"
+      url = "https://www.it-projekt-eg.de/"
+
+    [[params.links.list3.link]]
+      text = "Verband der Gründer und Selbstständigen Deutschland e.V."
+      url = "https://www.vgsd.de/brancheneintrag/olaf-radicke_56ee6e83"

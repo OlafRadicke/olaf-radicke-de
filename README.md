@@ -6,7 +6,7 @@ HUGO is used for the website.
 Quick test
 -----------
 
-For the view in the Browser enter: 
+For the view in the Browser enter:
 
 ```
 hugo server
@@ -16,7 +16,7 @@ Build
 -----
 
 ```
-hugo -D 
+hugo -D
 ```
 
 Update the theme
@@ -47,7 +47,7 @@ Build and push image (copy&paste)
 ---------------------------------
 
 ```bash
-LATES_VERSION=2.12
+LATES_VERSION=2.13
 hugo -D
 podman build -t olaf-radicke-de:latest --no-cache=true .
 podman tag  olaf-radicke-de:latest  olafradicke/olaf-radicke-de:${LATES_VERSION}
