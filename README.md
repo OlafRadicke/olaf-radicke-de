@@ -43,8 +43,14 @@ Test run:
 podman run --name olaf-radicke-de -d -p 8080:80 --rm olaf-radicke-de:latest
 ```
 
-Build and push image (copy&paste)
----------------------------------
+BUILD AND PUSH IMAGE
+--------------------
+
+### BY PIPELINE
+
+Commit changes and set a git tag.
+
+### BY HAND
 
 ```bash
 LATES_VERSION=2.13
