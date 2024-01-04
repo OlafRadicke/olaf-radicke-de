@@ -1,0 +1,20 @@
+---
+
+name: Hugo build test
+run-name: ${{ github.actor }} testing build with Hugo.
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+      - run: git checkout HEAD^
+      - run: scripts/install_hugo.sh
+      - run: echo "This job's status is ${{ job.status }}."
+      - run: |
+              ./cache/hugo \
+                --source ./ \
+                --baseURL  https://olaf-radicke.de \
+                --destination ../docs
