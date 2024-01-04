@@ -43,8 +43,14 @@ Test run:
 podman run --name olaf-radicke-de -d -p 8080:80 --rm olaf-radicke-de:latest
 ```
 
-Build and push image (copy&paste)
----------------------------------
+BUILD AND PUSH IMAGE
+--------------------
+
+### BY PIPELINE
+
+Commit changes and set a git tag.
+
+### BY HAND
 
 ```bash
 LATES_VERSION=2.13
@@ -53,6 +59,15 @@ podman build -t olaf-radicke-de:latest --no-cache=true .
 podman tag  olaf-radicke-de:latest  olafradicke/olaf-radicke-de:${LATES_VERSION}
 podman push olafradicke/olaf-radicke-de:${LATES_VERSION}
 ```
+
+GITHUB ACTION
+-------------
+
+### BUILD AND PUSH IMAGES
+
+[Using secrets in GitHub Actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
+
+[doku](https://docs.docker.com/build/ci/github-actions/multi-platform/)
 
 Todos
 -----
