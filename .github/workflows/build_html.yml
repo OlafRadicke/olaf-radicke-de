@@ -30,10 +30,8 @@ jobs:
           echo "Tag name from github.ref_name: ${{  github.ref_name }}"
           echo "secrets.DOCKERHUB_USERNAME: ${{  secrets.DOCKERHUB_USERNAME }}"
           echo "DOCKERHUB_USERNAME: $DOCKERHUB_USERNAME"
-        with: # Set the secret as an input
-          super_secret: ${{  secrets.DOCKERHUB_USERNAME }}
         env: # Or as an environment variable
-          super_secret: ${{  secrets.DOCKERHUB_USERNAME }}
+          DOCKERHUB_USERNAME: ${{  secrets.DOCKERHUB_USERNAME }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
