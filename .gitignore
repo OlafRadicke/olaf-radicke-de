@@ -1,3 +1,3 @@
 .hugo_build.lock
 public/
-themes/hugo-split-theme
+# themes/hugo-split-theme
