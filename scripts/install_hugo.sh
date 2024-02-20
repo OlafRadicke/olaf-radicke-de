@@ -18,7 +18,7 @@ tar -xvzf ./${CACHE_DIR}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
 
 # ls -lah ./hugo/themes
 
-git clone https://github.com/escalate/hugo-split-theme.git ./themes/hugo-split-theme
+# git clone https://github.com/escalate/hugo-split-theme.git ./themes/hugo-split-theme
 
 
 ls -lah ./themes/hugo-split-theme
