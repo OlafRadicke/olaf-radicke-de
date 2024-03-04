@@ -63,5 +63,6 @@ theme = "hugo-split-theme"
       url = "https://www.it-projekt-eg.de/"
 
     [[params.links.list3.link]]
-      text = "Verband der Gründer und Selbstständigen Deutschland e.V."
-      url = "https://www.vgsd.de/brancheneintrag/olaf-radicke_56ee6e83"
+      text = "VGSD e.V."
+      url = "https://www.vgsd.de/brancheneintrag/olaf-radicke_56ee6e83
+
