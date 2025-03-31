@@ -19,9 +19,11 @@ RUN ${LOCAL_BIN_DIR}/hugo version
 
 
 RUN ${LOCAL_BIN_DIR}/hugo \
---source /tmp/clone \
---baseURL  https://olaf-radicke.de \
---destination  /tmp/public
+  --panicOnWarning \
+  --source /tmp/clone \
+  --environment production \
+  --baseURL  https://olaf-radicke.de \
+  --destination  /tmp/public
 
 
 FROM nginx:1.27-alpine
