@@ -3,68 +3,70 @@ languageCode = 'de-de'
 title = 'Olaf Radicke'
 
 theme = "hugo-split-theme"
+features = []
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
 
 [params.visual.image]
-  enable = true
-  file = "images/portrait.jpg"
-  position = "center center"
+enable = true
+file = "images/portrait.jpg"
+position = "center center"
 
 
 [[params.links]]
-  [params.links.list1]
-    heading = "Accounts"
+[params.links.list1]
+heading = "Accounts"
 
-    [[params.links.list1.link]]
-      text = "freelancermap"
-      url = "https://www.freelancermap.de/freelancer-verzeichnis/profile/entwicklung/221480-profil-olaf-radicke-release-engineer-devops-site-reliability.html"
+[[params.links.list1.link]]
+text = "freelancermap"
+url = "https://www.freelancermap.de/freelancer-verzeichnis/profile/entwicklung/221480-profil-olaf-radicke-release-engineer-devops-site-reliability.html"
 
-    [[params.links.list1.link]]
-      text = "Xing"
-      url = "https://www.xing.com/profile/Olaf_Radicke/cv"
+[[params.links.list1.link]]
+text = "Xing"
+url = "https://www.xing.com/profile/Olaf_Radicke/cv"
 
-    [[params.links.list1.link]]
-      text = "LinkedIn"
-      url = "https://www.linkedin.com/in/olaf-radicke-72b7b462/"
+[[params.links.list1.link]]
+text = "LinkedIn"
+url = "https://www.linkedin.com/in/olaf-radicke-72b7b462/"
 
-    [[params.links.list1.link]]
-      text = "Github"
-      url = "https://github.com/OlafRadicke"
-
-
-
-  [params.links.list2]
-    heading = "Downloads"
-
-    [[params.links.list2.link]]
-      text = "Projekte/Profil (de)"
-      url = "https://docs.google.com/document/d/1jyHMSB8sRpkCbfxp76Oo5leONl4ohy1f7syZgsdqFGc/edit?usp=sharing"
-
-    # [[params.links.list2.link]]
-    #   text = "Lebenslauf (de)"
-    #   url = "https://docs.google.com/document/d/1O7qG6L7se87oPNLRSmL52_ditZcUT2EYW8OZbviOomE/edit?usp=sharing"
-
-    [[params.links.list2.link]]
-      text = "Projekte/Profil (en)"
-      url = "https://docs.google.com/document/d/1lzbExOxwL9lnDplrk-ENIZNJkn4JcUz_klM-wTmQ2jU/edit?usp=sharing"
-
-    # [[params.links.list2.link]]
-    #   text = "Lebenslauf (en)"
-    #   url = "https://docs.google.com/document/d/16fPRN1F2pp3ZMqRY9tEgKsKz2vE19MKiRgOf6coxngk/edit?usp=sharing"
+[[params.links.list1.link]]
+text = "Github"
+url = "https://github.com/OlafRadicke"
 
 
-  [params.links.list3]
-    heading = "Mitgliedschaften"
+[params.links.list2]
+heading = "Downloads"
 
-    [[params.links.list3.link]]
-      text = "IT-Projektgenossenschaft eG"
-      url = "https://www.it-projekt-eg.de/"
+[[params.links.list2.link]]
+text = "Projekte/Profil (de)"
+url = "https://docs.google.com/document/d/1jyHMSB8sRpkCbfxp76Oo5leONl4ohy1f7syZgsdqFGc/edit?usp=sharing"
 
-    [[params.links.list3.link]]
-      text = "VGSD e.V."
-      url = "https://www.vgsd.de/brancheneintrag/olaf-radicke_56ee6e83"
+# [[params.links.list2.link]]
+#   text = "Lebenslauf (de)"
+#   url = "https://docs.google.com/document/d/1O7qG6L7se87oPNLRSmL52_ditZcUT2EYW8OZbviOomE/edit?usp=sharing"
 
-    [[params.links.list3.link]]
-      text = "IT-Haftpflicht"
-      url = "https://www.exali.de/siegel/Olaf-Radicke"
+[[params.links.list2.link]]
+text = "Projekte/Profil (en)"
+url = "https://docs.google.com/document/d/1lzbExOxwL9lnDplrk-ENIZNJkn4JcUz_klM-wTmQ2jU/edit?usp=sharing"
+
+# [[params.links.list2.link]]
+#   text = "Lebenslauf (en)"
+#   url = "https://docs.google.com/document/d/16fPRN1F2pp3ZMqRY9tEgKsKz2vE19MKiRgOf6coxngk/edit?usp=sharing"
+
+
+[params.links.list3]
+heading = "Mitgliedschaften"
+
+[[params.links.list3.link]]
+text = "IT-Projektgenossenschaft eG"
+url = "https://www.it-projekt-eg.de/"
+
+[[params.links.list3.link]]
+text = "VGSD e.V."
+url = "https://www.vgsd.de/brancheneintrag/olaf-radicke_56ee6e83"
+
+[[params.links.list3.link]]
+text = "IT-Haftpflicht"
+url = "https://www.exali.de/siegel/Olaf-Radicke"
 
 # text = "Verband der Gründer und Selbstständigen Deutschland e.V."
