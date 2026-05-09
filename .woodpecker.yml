@@ -1,0 +1,27 @@
+when:
+  event: tag
+
+steps:
+  test-secret:
+    image: alpine
+    environment:
+      # Hier weisen wir den Wert des Secrets einer Umgebungsvariable zu
+      MY_TOKEN:
+        from_secret: CODEBERG_TOKEN
+    commands:
+      # Wir prüfen die Länge der Variable MY_TOKEN
+      - echo "Länge des Tokens ist ${#MY_TOKEN}"
+      - env | grep MY_TOKEN
+
+  buildah:
+    image: ghcr.io/404systems/plugin-buildah
+    privileged: true
+    settings:
+      registry: codeberg.org
+      repo: olafradicke/olaf-radicke-de
+      dockerfile: Dockerfile.caddy
+      context: .
+      tags: ${CI_COMMIT_TAG}
+      username: olafradicke
+      password:
+        from_secret: CODEBERG_TOKEN

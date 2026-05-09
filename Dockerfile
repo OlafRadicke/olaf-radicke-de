@@ -1,30 +1,40 @@
-FROM nginx:1.27-alpine AS build
+# BUILD ENV ###################################################################
+FROM alpine:3.20 AS build
+ARG TARGET_URL=https://quaker-kr.de
+ARG HUGO_SRC=/tmp/hugo_src
+ARG HUGO_PUB=/tmp/hugo_public
 
-#!/usr/bin/env bash
+COPY ./hugo  ${HUGO_SRC}
 
-ARG DOWNLOAD_HOST="https://github.com/gohugoio/hugo/releases/download"
-ARG HUGO_VERSION="0.112.7"
-ARG LOCAL_BIN_DIR="/local"
+RUN apk add \
+  curl \
+  git \
+  hugo
 
-COPY .  /tmp/clone
+RUN mkdir -p ${HUGO_SRC} \
+  ${HUGO_PUB}
 
-RUN mkdir -p ${LOCAL_BIN_DIR}
-RUN curl -L ${DOWNLOAD_HOST}/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
-  --output ${LOCAL_BIN_DIR}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
-
-RUN tar -xvzf ${LOCAL_BIN_DIR}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
-  -C ${LOCAL_BIN_DIR}
-
-RUN ${LOCAL_BIN_DIR}/hugo version
-
-
-RUN ${LOCAL_BIN_DIR}/hugo \
+RUN hugo version
+RUN hugo \
   --panicOnWarning \
-  --source /tmp/clone \
-  --environment production \
-  --baseURL  https://olaf-radicke.de \
-  --destination  /tmp/public
+  --source ${HUGO_SRC} \
+  --destination ${HUGO_PUB} \
+  --baseURL ${TARGET_URL}
+
+# RUN ENV #####################################################################
 
 
-FROM nginx:1.27-alpine
-COPY --from=build /tmp/public    /usr/share/nginx/html
+FROM caddy:2.8-alpine
+ARG HUGO_PUB=/tmp/hugo_public
+
+# Wechsel zum unprivilegierten Standard-User 'nobody'
+USER nobody
+
+# Kopieren der Dateien mit korrektem Besitzer (chown), damit 'nobody' sie lesen darf
+COPY --from=build --chown=nobody:nobody ${HUGO_PUB} /usr/share/caddy
+
+# Port 8080 für unprivilegierte Umgebungen
+EXPOSE 8080
+
+# Caddy startet als File-Server auf Port 8080
+CMD ["caddy", "file-server", "--root", "/usr/share/caddy", "--listen", ":8080"]
